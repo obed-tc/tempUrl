@@ -10,7 +10,30 @@ function Home() {
 
       <div className="flex flex-col min-h-screen relative z-20">
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 flex items-center">
+          <div className="w-1/2 text-white px-16">
+            <h2 className="text-4xl font-semibold">
+              Comparte con seguridad, sube, genera y desaparece
+            </h2>
+            <br />
+            <p className="w-[80%] text-sm text-gray-200">
+              Una herramienta que permite subir archivos TXT o imágenes y
+              generar URLs de un solo uso que se autodestruyen al abrirse.
+              Comparte información sensible sin dejar rastro, asegurando
+              privacidad y seguridad en cada intercambio. Ideal para envíos
+              temporales y confidenciales
+            </p>
+            <br />
+            <div className="flex space-x-2">
+              <button className="bg-white text-primary-800 px-5 py-1 rounded-md font-semibold">
+                Contribuir
+              </button>
+              <button className="bg-white text-primary-800 px-5 py-1 rounded-md font-semibold">
+                Empezar ahora
+              </button>
+            </div>
+          </div>
+
           <div className="bg-white h-[70vh] flex flex-col w-1/3 absolute right-[15vw] top-[15vh] border border-gray-100 shadow-2xl rounded-md  p-5">
             <div className="border-[2px] flex flex-col items-center justify-center border-gray-500 rounded-lg border-dashed p-5 h-full">
               <svg
