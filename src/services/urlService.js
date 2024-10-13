@@ -2,14 +2,9 @@
 export const uploadFile = async (file) => {
   const formData = new FormData();
   formData.append("file", file);
-  console.log(file);
-  console.log("XD");
-  formData.forEach((value, key) => {
-    console.log(`${key}:`, value);
-  });
 
-  const API_URL = "https://tmpu.vercel.app";
-  console.log(formData);
+  const API_URL = import.meta.env.VITE_BASE_URL;
+  console.log(API_URL);
   try {
     const response = await fetch(`${API_URL}/api/url/generate`, {
       method: "POST",
