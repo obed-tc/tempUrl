@@ -5,7 +5,7 @@ function Footer() {
         <li>
           <a
             href="https://x.com/ObedCT_"
-            className="text-white hover:text-primary-300"
+            className=" md:text-white hover:text-primary-300"
           >
             <svg
               className="w-5 "
@@ -20,7 +20,7 @@ function Footer() {
         <li>
           <a
             href="https://github.com/obed-tc"
-            className="text-white hover:text-primary-300"
+            className="md:text-white hover:text-primary-300"
           >
             <svg
               className="w-5"
@@ -33,8 +33,9 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <label className="text-xs text-white">
-        Desarrollado por <span className="text-primary-300">obed-tc</span>
+      <label className="text-xs md:text-white">
+        Desarrollado por{" "}
+        <span className="text-primary-600 md:text-primary-300">obed-tc</span>
       </label>
     </footer>
   );

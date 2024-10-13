@@ -53,6 +53,11 @@ function Home() {
       return;
     }
     setIsLoading(true);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
     try {
       const data = await uploadFile(selectedFile);
       setGeneratedURL(data.url);
@@ -67,19 +72,19 @@ function Home() {
 
   return (
     <div>
-      <div className="bg-[url('https://www.shutterstock.com/image-photo/hand-typing-on-laptop-send-600nw-2383433439.jpg')] bg-cover bg-center w-[65vw] absolute h-screen z-10"></div>
+      <div className="bg-[url('https://www.shutterstock.com/image-photo/hand-typing-on-laptop-send-600nw-2383433439.jpg')] bg-cover bg-center w-[100vw] md:w-[65vw] absolute h-[60vh] md:h-screen z-10"></div>
 
-      <div className="bg-primary-950 w-[65vw] absolute h-screen z-10 bg-opacity-80"></div>
+      <div className="bg-primary-950 w-[100vw] md:w-[65vw] absolute h-[60vh] md:h-screen z-10 bg-opacity-80"></div>
 
       <div className="flex flex-col min-h-screen relative z-20">
         <Header />
-        <main className="flex-1 flex items-center">
-          <div className="w-1/2 text-white px-16">
+        <main className="flex-1 md:flex md:items-center">
+          <div className="md:w-1/2 w-full text-white px-2 md:px-16 text-center md:text-start">
             <h2 className="text-4xl font-semibold">
               Comparte con seguridad, sube, genera y desaparece
             </h2>
             <br />
-            <p className="w-[80%] text-sm text-gray-200">
+            <p className="md:w-[80%] text-sm text-gray-200">
               Una herramienta que permite subir archivos TXT o imágenes y
               generar URLs de un solo uso que se autodestruyen al abrirse.
               Comparte información sensible sin dejar rastro, asegurando
@@ -87,7 +92,7 @@ function Home() {
               temporales y confidenciales
             </p>
             <br />
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 justify-center md:justify-start">
               <a
                 className="bg-white text-primary-800 px-5 py-1 rounded-md font-semibold"
                 href="https://github.com/obed-tc/tempUrl"
@@ -100,7 +105,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="bg-white h-[70vh] flex flex-col w-1/3 absolute right-[15vw] top-[15vh] border border-gray-100 shadow-2xl rounded-md  p-5">
+          <div className="bg-white mt-10 md:mt-0 h-[70vh] md:h-[70vh] flex flex-col md:w-1/3 w-full md:absolute md:right-[15vw] top-[15vh] border border-gray-100 shadow-2xl rounded-md  p-5">
             {!generatedURL ? (
               <div className="border-[2px] flex flex-col items-center justify-center border-gray-500 rounded-lg border-dashed p-5 h-full">
                 {preview ? (
@@ -202,7 +207,7 @@ function Home() {
         <Footer />
       </div>
       {isLoading && (
-        <div className="bg-black w-[100vw] h-[100vh] absolute left-0 top-0 bg-opacity-60 z-30 flex items-center justify-center">
+        <div className="bg-black w-[100vw] h-[100vh]  absolute left-0 top-0 bg-opacity-60 z-30 flex items-center justify-center">
           <div className="loader"></div>
 
           <label className="text-white">Generando url...</label>
