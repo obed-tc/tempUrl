@@ -3,7 +3,7 @@ function Header() {
     <header className="px-10 py-3 flex justify-between items-center ">
       <h1 className="text-2xl font-bold text-white">TempUrl</h1>
 
-      <nav>
+      <nav className="md:block hidden">
         <ul className="flex space-x-6">
           <li>
             <a href="/" className="text-white hover:text-blue-300">
